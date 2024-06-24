@@ -1,0 +1,79 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="container">
+    <div class="card mt-5 text-center">
+        <h1>Repertoar Dashboard</h1>
+    </div>
+    <div class="card mt-5 p-4">
+        <form>
+            <div class="form-group">
+                <label for="film">Naziv filma:</label>
+                <input type="text" [(ngModel)]="film" [ngModelOptions]="{standalone:true}" class="form-control" id="film" aria-describedby="film" placeholder="Naziv filma">
+            </div>
+            <div class="form-group">
+                <label for="reziser">Reziser filma:</label>
+                <input type="text" [(ngModel)]="reziser" [ngModelOptions]="{standalone:true}" class="form-control" id="reziser" aria-describedby="reziser" placeholder="Reziser filma">
+            </div>
+            <div class="form-group">
+                <label for="zanr">Zanr filma:</label>
+                <input type="text" [(ngModel)]="zanr" [ngModelOptions]="{standalone:true}" class="form-control" id="zanr" aria-describedby="zanr" placeholder="Zanr filma">
+            </div>
+            <div class="form-group">
+                <label for="trajanje">Trajanje filma:</label>
+                <input type="text" [(ngModel)]="trajanje" [ngModelOptions]="{standalone:true}" class="form-control" id="trajanje" aria-describedby="trajanje" placeholder="Trajanje filma">
+            </div>
+            <div class="form-group">
+                <label for="ocena">Ocena filma:</label>
+                <input type="text" [(ngModel)]="ocena" [ngModelOptions]="{standalone:true}" class="form-control" id="ocena" aria-describedby="ocena" placeholder="Ocena filma">
+            </div>
+            <div class="form-group">
+                <label for="projekcija">Projekcija filma:</label>
+                <input type="text" [(ngModel)]="projekcija" [ngModelOptions]="{standalone:true}" class="form-control" id="projekcija" aria-describedby="projekcija" placeholder="Projekcija filma">
+            </div>
+            <div class="form-group">
+                <label for="cenaKarte">Cena karte:</label>
+                <input type="text" [(ngModel)]="cenaKarte" [ngModelOptions]="{standalone:true}" class="form-control" id="cenaKarte" aria-describedby="cenaKarte" placeholder="Cena karte">
+            </div>
+            <div class="form-group">
+                <label for="imgRepertoar">URL slike:</label>
+                <input type="text" [(ngModel)]="imgRepertoar" [ngModelOptions]="{standalone:true}" class="form-control" id="imgRepertoar" aria-describedby="imgRepertoar" placeholder="URL slike">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary w-100" (click)="save()">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Repertoar ID</th>
+                <th>Naziv filma</th>
+                <th>Reziser filma</th>
+                <th>Zanr filma</th>
+                <th>Trajanje filma</th>
+                <th>Ocena filma</th>
+                <th>Projekcija filma</th>
+                <th>Cena karte</th>
+                <th>URL slike</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let product of productDetail">
+                <td>{{product.idRepertoar}}</td>
+                <td>{{product.film}}</td>
+                <td>{{product.reziser}}</td>
+                <td>{{product.zanr}}</td>
+                <td>{{product.trajanje}}</td>
+                <td>{{product.ocena}}</td>
+                <td>{{product.projekcija}}</td>
+                <td>{{product.cenaKarte}}</td>
+                <td><img src="{{product.imgRepertoar}}" alt="slika" width="150px" height="150px"></td>
+                <td><button type="button" class="btn btn-primary" (click)="setUpdate(product)">Edit</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="setDelete(product)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

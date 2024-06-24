@@ -1,0 +1,43 @@
+<app-navbar-admin></app-navbar-admin>
+<div class="container">
+    <div class="card mt-5 text-center">
+        <h1>Recenzija Dashboard</h1>
+    </div>
+    <div class="card mt-5 p-4">
+        <form>
+            <div class="form-group">
+                <label for="textRecenzije">Vaša recenzija:</label>
+                <input type="text" [(ngModel)]="textRecenzije" [ngModelOptions]="{standalone:true}" class="form-control" id="textRecenzije" aria-describedby="textRecenzije" placeholder="Tekst recenzije">
+            </div>
+            <div class="form-group">
+                <label for="markRecenzije">Vaša ocena:</label>
+                <input type="text" [(ngModel)]="markRecenzije" [ngModelOptions]="{standalone:true}" class="form-control" id="markRecenzije" aria-describedby="markRecenzije" placeholder="Ocena recenzije">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary w-100" (click)="save()">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Recenzija ID</th>
+                <th>Vaša recenzija</th>
+                <th>Vaša ocena</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let product of productDetail">
+                <td>{{product.idRecenzija}}</td>
+                <td>{{product.textRecenzije}}</td>
+                <td>{{product.markRecenzije}}</td>
+                <td><button type="button" class="btn btn-primary" (click)="setUpdate(product)">Edit</button></td>
+                <td><button type="button" class="btn btn-danger" (click)="setDelete(product)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

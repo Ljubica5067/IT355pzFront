@@ -1,0 +1,22 @@
+img {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* Postavite visinu na 100% visine ekrana */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Opciono: Postavlja visinu div kontejnera na 100% visine ekrana */
+}
+
+img {
+    max-width: 100%;
+    /* Opciono: Održava širinu slike unutar ekrana */
+}

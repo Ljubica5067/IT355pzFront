@@ -1,0 +1,53 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card .form-group {
+    margin-bottom: 15px;
+}
+
+.card .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card .form-control {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}

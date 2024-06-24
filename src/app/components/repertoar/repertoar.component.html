@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Repertoar ID</th>
+                <th>Naziv filma</th>
+                <th>Reziser filma</th>
+                <th>Zanr filma</th>
+                <th>Trajanje filma</th>
+                <th>Ocena filma</th>
+                <th>Projekcija filma</th>
+                <th>Cena karte</th>
+                <th>Poster</th>
+
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let product of productDetail">
+                <td>{{product.idRepertoar}}</td>
+                <td>{{product.film}}</td>
+                <td>{{product.reziser}}</td>
+                <td>{{product.zanr}}</td>
+                <td>{{product.trajanje}}</td>
+                <td>{{product.ocena}}</td>
+                <td>{{product.projekcija}}</td>
+                <td>{{product.cenaKarte}}</td>
+                <td><img src="{{product.imgRepertoar}}" alt="slika" width="250px" height="350px"></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
